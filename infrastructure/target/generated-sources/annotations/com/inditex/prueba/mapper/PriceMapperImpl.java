@@ -15,7 +15,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-10-13T03:40:56-0500",
+    date = "2023-10-29T14:23:49-0500",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.20.1 (Amazon.com Inc.)"
 )
 public class PriceMapperImpl implements PriceMapper {

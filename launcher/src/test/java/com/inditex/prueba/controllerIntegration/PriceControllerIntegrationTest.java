@@ -1,4 +1,4 @@
-package com.inditex.prueba.controllerIt;
+package com.inditex.prueba.controllerIntegration;
 
 import com.inditex.prueba.PriceApplication;
 import com.inditex.prueba.generated.model.ResponseDto;
@@ -8,21 +8,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.jdbc.Sql;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.time.OffsetDateTime;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @SpringBootTest(classes = PriceApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-public class PriceControllerItTest {
+public class PriceControllerIntegrationTest {
 
     @LocalServerPort
     private int port;
