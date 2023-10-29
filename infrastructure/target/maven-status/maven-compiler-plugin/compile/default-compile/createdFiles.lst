@@ -1,0 +1,7 @@
+com\inditex\prueba\adapters\PriceJpaAdapter.class
+com\inditex\prueba\entity\Product.class
+com\inditex\prueba\mapper\PriceMapper.class
+com\inditex\prueba\entity\Brand.class
+com\inditex\prueba\entity\Price.class
+com\inditex\prueba\mapper\PriceMapperImpl.class
+com\inditex\prueba\repository\PriceRepository.class

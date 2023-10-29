@@ -1,0 +1,7 @@
+com\inditex\prueba\generated\model\ResponseDto.class
+com\inditex\prueba\controller\PriceController.class
+com\inditex\prueba\generated\api\GetPriceApi.class
+com\inditex\prueba\mapper\DtoMapperImpl.class
+com\inditex\prueba\generated\api\ApiUtil.class
+com\inditex\prueba\generated\model\Error.class
+com\inditex\prueba\mapper\DtoMapper.class

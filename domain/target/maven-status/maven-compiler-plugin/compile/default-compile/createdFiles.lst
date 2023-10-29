@@ -1,0 +1,9 @@
+com\inditex\prueba\model\ProductDto.class
+com\inditex\prueba\service\PriceServiceImpl.class
+com\inditex\prueba\model\BrandDto$BrandDtoBuilder.class
+com\inditex\prueba\ports\input\PriceServiceInterface.class
+com\inditex\prueba\ports\output\PricePersistenceInterface.class
+com\inditex\prueba\model\PriceDto.class
+com\inditex\prueba\model\BrandDto.class
+com\inditex\prueba\model\PriceDto$PriceDtoBuilder.class
+com\inditex\prueba\model\ProductDto$ProductDtoBuilder.class

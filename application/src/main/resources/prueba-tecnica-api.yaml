@@ -1,0 +1,124 @@
+openapi: "3.0.0"
+info:
+  description: "Prueba Tecnica API"
+  version: "1.0.0"
+  title: "Prueba Tecnica API"
+  contact:
+    email: "alejoicecream@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+servers:
+  - url: http://localhost:8081/
+    description: "local host"
+
+paths:
+  /getPrice:
+    get:
+      summary: Get product price by application date, product and brand
+      operationId: getPrice
+      tags:
+        - price
+      parameters:
+        - name: applicationDate
+          in: query
+          description: application date of buy
+          required: true
+          explode: true
+          schema:
+            type: string
+            format: date-time
+            example: 2020-06-14T10:00:00.00Z
+        - name: productId
+          in: query
+          description: product identification code
+          required: true
+          explode: true
+          schema:
+            type: integer
+            format: int64
+            example: 35455
+        - name: brandId
+          in: query
+          description: product brand
+          required: true
+          explode: true
+          schema:
+            type: integer
+            format: int64
+            example: 1
+      responses:
+        200:
+          description: "Retrieve final price and product details"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResponseDto"
+        400:
+          description: "BadRequest"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        500:
+          description: "Internal server error"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        503:
+          description: "Service unavailable"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+
+components:
+  schemas:
+    ResponseDto:
+      type: object
+      required:
+        - productId
+        - brandId
+        - priceId
+        - startDate
+        - endDate
+        - price
+      properties:
+        productId:
+          type: integer
+          format: int64
+          example: 35455
+        brandId:
+          type: integer
+          format: int64
+          example: 1
+        priceId:
+          type: integer
+          format: int64
+          example: 1
+        endDate:
+          type: string
+          format: date-time
+          example: 2020-06-14T10:00:00.00Z
+        startDate:
+          type: string
+          format: date-time
+          example: 2020-06-14T10:00:00.00Z
+        price:
+          type: number
+          format: double
+          example: 5.0
+
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string

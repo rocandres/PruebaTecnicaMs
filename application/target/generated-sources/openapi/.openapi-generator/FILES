@@ -1,0 +1,4 @@
+src/main/java/com/inditex/prueba/generated/api/ApiUtil.java
+src/main/java/com/inditex/prueba/generated/api/GetPriceApi.java
+src/main/java/com/inditex/prueba/generated/model/Error.java
+src/main/java/com/inditex/prueba/generated/model/ResponseDto.java
